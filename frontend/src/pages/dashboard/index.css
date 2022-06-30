@@ -1,0 +1,183 @@
+.logo-area {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -20;
+  right: 80;
+  align-items: center;
+}
+
+.nav-tabs {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.nav-item button {
+  border: 0 !important;
+  font-size: 16px;
+  background-color: transparent !important;
+}
+
+.body-content {
+  background: #416bc9;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: gray
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+  color: #fff
+}
+
+.banner {
+  min-height: 250px;
+  background: #416bc9;
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mebership-btn, 
+.add-btn {
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 150px;
+}
+
+.emergency-btn,
+.refer-btn {
+  margin-top: 10px;
+  background-color: #3cd9cd;
+  width: 150px;
+}
+
+.detail-info {
+  width: 30%;
+}
+
+.title,
+.emergency-btn,
+.refer-btn,
+.logo-area, 
+.logo-area  h4,
+.membership-area h1  {
+  color: #fff;
+}
+
+.refair-section
+{
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.membership-area {
+  color: #fff;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.personal-info,
+.billing-area,
+.invoice-area,
+.email-preference,
+.account-preference {
+  background-color: #fff;
+  margin-top: -13px;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.personal-info,
+.view-card-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal-info p,
+.billing-area p,
+.email-preference p,
+.account-preference p {
+  color: #000;
+}
+
+.account-preference {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.edit-btn,
+.card-btn
+{
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.member-btn-area {
+  margin-top: 20px;
+}
+
+.member-btn
+{
+  background-color: rgb(109, 150, 212);
+  border: 1px solid #000;
+  color: #fff;
+}
+
+.billing-hr{
+  width: 100%;
+  height: 1px;
+  background: #3cd9cd;
+}
+
+.invoice-area th, td {
+  color: #000;
+}
+
+.password-eye {
+  color:#53c4d4;
+}
+
+.btn-area {
+  margin-top: 20px;
+}
+
+.cancel-btn, .save-edit-btn {
+  width: 120px;
+}
+
+.save-edit-btn {
+  margin-left: 20px;
+}
+
+
+.gallery-img {
+  width: 100%;
+  height: 70vh !important;
+}
+
+.carousel-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-arrow {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+
+@media screen and (max-width: 768px) {
+  .logo-area{
+    display: none;
+  }
+}

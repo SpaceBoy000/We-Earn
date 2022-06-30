@@ -1,0 +1,224 @@
+* {
+  font-family: 'bahnschrift';
+}
+
+header .introduction-text {
+  padding-top: 350px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.intro h1 {
+  font-family: "bahnschrift", sans-serif;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: inherit;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.btn-custom {
+  font-family: "Raleway", sans-serif;
+  text-transform: inherit;
+  color: #fff;
+  background-color: #1dbcf3;
+  padding: 14px 80px;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bolder;
+  border-radius: 25px;
+  transition: all 0.5s linear;
+  border: 0;
+}
+
+.btn-custom-coverage {
+  font-family: "Raleway", sans-serif;
+  text-transform: inherit;
+  color: #fff;
+  background-color: #8daac9;
+  padding: 14px 80px;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.5s linear;
+  border: 0;
+}
+
+#future,
+#service {
+  background-color: #edf2f4;
+  padding-bottom: 50px;
+}
+
+#future h1,
+#service h1{
+  color: #fff;
+}
+
+#future p,
+#service p {
+  color: #000;
+}
+
+.section-body {
+  display: flex;
+  justify-content: center;
+}
+
+.section-body .calculator, 
+.about-section,
+.service {
+  width: 70%;
+}
+
+.calculator > div, 
+.service-container,
+.works-body {
+  box-shadow: 2px 2px 5px 0px #714484;
+  border-radius: 25px;
+}
+
+.calculator-header,
+.service-header {
+  width: 100%;
+  background-position: center;
+  height: 115px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.calculator-title,
+.service-title {
+  font-family: 'bahnschrift';
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+.calculate-txt {
+  line-height: 0;
+  margin-top: 40px;
+  color: #2b2d42 !important;
+}
+
+.calculator-body,
+.service-body {
+  background-color: #fff;
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right:  50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.service-body {
+  padding-bottom: 30px;
+}
+
+.invest {
+  display: flex;
+  justify-content: space-between;
+}
+
+.invest input {
+  height: 30px;
+}
+
+.result-body {
+  display: flex;
+  justify-content: space-around;
+}
+.result-title {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.result-1, .result-2 {
+  display: flex;
+  height: 61px;
+}
+
+.result-1 div, .result-2 div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.invest-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.invest-btn {
+  width: 40%;
+}
+
+.invest-section p {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+#about {
+  background-color: #061520;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.about-body {
+  display: flex;
+  justify-content: space-between !important;
+}
+.about-body .title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.about-body .detail {
+  padding-left: 20px;
+}
+
+.underline {
+  height: 1px;
+  width: 250px;
+  background: #1baee2;
+  margin-bottom: 20px;
+  border: 0;
+}
+
+.detail .explain {
+  color: #fff;
+}
+
+.about-body .img {
+  padding-top: 50px;
+}
+
+.about-body {
+  margin-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 2px solid #1baee2;
+}
+
+
+#works {
+  margin-bottom: 40px;
+  color: #000;
+}
+
+@media (min-width: 1200px){
+  .container {
+      width: 1029px;
+  }
+}
