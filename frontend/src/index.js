@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { AuthProvider } from "./providers/AuthProvider";
+import { ContractProvider } from "./providers/ContractProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <ContractProvider>
+        <App />
+      </ContractProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,27 +1,25 @@
 import { Link } from "react-router-dom";
 import React from 'react';
+import CachedIcon from "@mui/icons-material/Cached";
+
+import { useAuthContext } from "../providers/AuthProvider";
+import { Button } from "@mui/material";
 
 const investStyle = {
   border: '2px solid #337ab7'
 }
 
-class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
+export function shorten(str) {
+  if (str.length < 10) return str;
+  return `${str.slice(0, 6)}...${str.slice(str.length - 4)}`;
+}
 
-    this.state= {
-      investionEnable: 'off'
-    }
-  }
+const Navigation = () => {
 
-  onInvestHandle () {
-    this.setState({
-      investionEnable: 'on'
-    });
-  }
+  const { address, loading, connect, disconnect } = useAuthContext();
 
-  render() {
-    return (
+  return (
+    <>
       <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
         <div className='container'>
           <div className='navbar-header'>
@@ -41,7 +39,7 @@ class Navigation extends React.Component {
               <img src='img/logo.png' style={{width: '45px', position: 'fixed', top: '20px'}}/>
             </Link>{' '}
           </div>
-  
+
           <div
             className='collapse navbar-collapse'
             id='bs-example-navbar-collapse-1'
@@ -62,18 +60,24 @@ class Navigation extends React.Component {
                   how it start
                 </a>
               </li>
-              <li onClick={this.onInvestHandle.bind(this)}>
+              <li>
                 <Link to='/invest' className='page-scroll' 
-                  style={this.state.investionEnable == 'off' ? {} : investStyle}>
+                  >
                   Invest Now
                 </Link>
+              </li>
+              <li>
+                <Button onClick={ () => { address ? disconnect() : connect() }} style={{fontSize:"17px", color:"white", fontWeight:"bold", paddingTop:"11px"}}>
+                  { address ? shorten(address) : "connect" } <CachedIcon sx={{marginLeft: '10px'}}/>
+                </Button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    )
-  }
+    </>
+  );
 }
+
 
 export default Navigation;

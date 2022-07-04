@@ -65,6 +65,7 @@ font {
 
 .invest-catagory {
   margin-top: 45px;
+  text-align: center;
 }
 
 .invest-catagory img {
@@ -278,8 +279,23 @@ input#type2:checked + label.toggle_label.type2>span.toggle_span.type2
       width: 970px;
   }
 }
-@media (min-width: 768px){
-  .content {
+@media (min-width: 768px){.content {
       width: 750px;
   }
+}
+
+.btn_reinvest {
+  border: none;
+  width: 120px;
+  height: 35px;
+  background: url('./img/reinvest.png') no-repeat;
+  background-size: contain;
+}
+
+.btn_withdraw {
+  border: none;
+  width: 120px;
+  height: 35px;
+  background: url('./img/withdraw.png') no-repeat;
+  background-size: contain;
 }
