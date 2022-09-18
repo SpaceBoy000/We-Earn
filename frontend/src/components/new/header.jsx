@@ -23,8 +23,8 @@ export const Header = (props) => {
               <div className='row'>
                 <div className='col-md-8 col-md-offset-2 introduction-text'>
                   <h1>
-                    {/* Start investing right now! */}
-                    Let's contact on Telegram! My Telegram ID: @cryptospaceboy00
+                    Start investing right now!
+                    {/* Let's contact on Telegram! My Telegram ID: @cryptospaceboy00 */}
                   </h1>
                   <div>
                     <span style={{color: '#fff'}}>

@@ -1,4 +1,22 @@
+import { useEffect, useState } from "react";
+
 export const Future = (props) => {
+  const [amount, setAmount] = useState(0);
+  const [duration, setDuration] = useState(0);
+  console.log("amount: ", amount);
+
+  const rate = 0.03;
+  const numberWithCommas = (x, digits = 3) => {
+    return Number(x).toLocaleString(undefined, { maximumFractionDigits: digits });
+  }
+
+  const calcAPY = () => {
+    if (duration == 0) return 0;
+
+    const times = 365 / duration;
+    return numberWithCommas(amount * Math.pow((1 + duration * rate / times), times));
+  }
+
   return (
     <div id="future">
       <div className="container section-body">
@@ -12,7 +30,7 @@ export const Future = (props) => {
               <div className="invest">
                 <div>
                   <p>Amount Invested</p>
-                  <input type="number"/>
+                  <input type="number" onChange={e => setAmount(e.target.value)}/>
                 </div>
                 <div>
                   <p>Compounding Amount</p>
@@ -22,7 +40,7 @@ export const Future = (props) => {
                 </div>
                 <div>
                   <p>Duration</p>
-                  <input type="number" style={{width: '120px'}} placeholder="days"/>
+                  <input type="number" style={{width: '120px'}} placeholder="days" onChange={e => setDuration(e.target.value)}/>
                 </div>
               </div>
               <div className="result">
@@ -36,7 +54,7 @@ export const Future = (props) => {
                     </div>
                     <div style={{background: '#2b2d42'}}>
                       <p style={{color: '#fff'}}>
-                        0.03000000000
+                        { numberWithCommas(rate * amount) }
                       </p>
                     </div>
                   </div>
@@ -48,14 +66,14 @@ export const Future = (props) => {
                     </div>
                     <div style={{background: '#2b2d42'}}>
                       <p style={{color: '#fff'}}>
-                        1.9000000000
+                        { calcAPY() }
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="invest-section">
-                <a
+                <a href="/invest"
                   className='btn btn-custom btn-lg page-scroll invest-btn'
                 >
                   Invest Now
